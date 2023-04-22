@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./fonts/Actay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>1618 Room</title>
+</head>
+<body>
+    <!-- Vertical Lines for Styling -->
+    <div class="vertical-line" id="line-1" height: 100vh></div>
+    <div class="vertical-line" id="line-2" height: 100vh></div>
+    <div class="vertical-line" id="line-3" height: 100vh></div>
+    <div class="vertical-line" id="line-4" height: 100vh></div>
+    <div class="vertical-line" id="line-5" height: 100vh></div>
+    <!-- Dropdown Block -->
+    <div id="dropdown-block">
+        <div class="dropdown-container">
+            <img class="drop-link" id="drop-logo" src="../1618-Full-Website/images/logo.svg" alt="logotip">
+            <img class="drop-link" id="drop-x" src="../1618-Full-Website/images/x.svg" alt="x" width="40px" height="40px" onclick="dropClose()">
+            <a class="drop-link" id="projects-link" href="#">Projects</a>
+            <a class="drop-link" id="about-link" href="#">About Us</a>
+            <a class="drop-link" id="contacts-link" href="#">Contacts</a>
+            <a class="drop-link" id="behance" href="#">Behance</a>
+            <a class="drop-link" id="facebook" href="#">Facebook</a>
+            <a class="drop-link" id="instagram" href="#">Instagram</a>
+        </div>
+    </div>
+    <!-- Start of the First Block -->
+    <div class="first-block">
+        <!-- Logo -->
+        <img class="logo" src="./images/logo.svg" alt="logo-image" width="105px" height="60px">
+        <!-- Nav Menu -->
+        <div class="nav-menu">
+            <a href="#">Projects</a>
+            <a href="#">About Us</a>
+            <a href="#">Contacts</a>
+        </div>
+        <!-- Dropdown -->
+        <div class="dropdown-burger">
+            <img src="./images/dropdown.svg" alt="" width="50px" height="50px" onclick="dropOpen()">
+        </div>
+        <!-- Main Headline -->
+        <h1>1618 ROOM</h1>
+        <!-- Author's name -->
+        <h3>architecture studio <br> viktoria doronina</h3>
+        <!-- First Block Images -->
+        <div class="first-block-image-container">
+            <img class="room-image-1" src="./images/full-size.jpg" alt="room-image-1" width="275px" height="275px">
+            <img class="room-image-2" src="./images/first-block-2.png" alt="room-image-2" width="275px" height="275px">
+            <img class="room-image-3" src="./images/first-block-3.png" alt="room-image-3" width="275px" height="275px">
+            <!-- Images Button to open All Projects -->
+            <div class="first-block-images-button">
+                <img src="./images/little-line.svg" alt="line" width="44px" height="1px">
+                <p>All Projects</p>
+            </div>
+        </div>
+        <!-- Main Text Container with Socials -->
+        <div class="main-text-container">
+            <p class="main-text-1">
+                we&nbsp;create interiors for life and business. we&nbsp;develop projects of&nbsp;private houses. apartments, cafe and restaurants.
+            </p>
+            <p class="main-text-2">
+                we&nbsp;conduct author&rsquo;s supervision&nbsp; and&nbsp; a&nbsp;complete set. we&nbsp;cooperate with professional contractors and suppliers.
+            </p>
+            <!-- Socials 1 -->
+            <div class="socials-1">
+                <a href="#">Behance</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <!-- H2 All Projects -->
+        <div class="all-projects-container">
+            <img src="./images/little-line.svg" alt="line" width="102px" height="2px">
+            <h2>All Projects</h2>
+        </div>
+    </div>
+    <!-- Start of the Second Block with Galleries and Full Width -->
+    <div class="second-block">
+        <div class="commercial-gallery">
+            <!-- Button that leads to Commercial Page -->
+            <div class="commercial-page" id="commercial-button">
+                <h2 id=>Commercial</h2>
+                <h4>Interior Design</h4>
+                <img id="arrow-button-1" src="./images/button-arrow.svg" alt="arrow-button" width="45px" height="21px">
+            </div>
+            <!-- Commercial Photo Container 1 -->
+            <div class="commercial-photo-container-1">
+                <img id="commercial-photo-1" src="./images/commersial-photo-1.png" alt="commercial-photo-1 image" width="727px" height="762px">
+            </div>
+            <!-- Commercial Photo Container 2 -->
+            <div class="commercial-photo-container-2">
+                <img id="commercial-photo-2" src="./images/commersial-photo-2.png" alt="commercial-photo-2 image" width="727px" height="762px">
+            </div>
+            <!-- Commercial Counter -->
+            <div class="commercial-counter">
+                <div id="next-commercial" onclick="nextCommercial()">
+                    <img id="next-commercial-arrow" src="./images/button-arrow-2.svg" alt="arrow-button" width="45px" height="21px">
+                </div>
+                <div class="counter-commercial" id="counter-commercial">1 / 5</div>
+            </div>
+        </div>
+        <!-- Residental Gallery -->
+        <div class="residental-gallery">
+            <!-- Button that leads to Residental Page -->
+            <div class="residental-page" id="residental-button">
+                <h2>Residental</h2>
+                <h4>Interior Design</h4>
+                <img id="arrow-button-2" src="./images/button-arrow.svg" alt="arrow-button" width="45px" height="21px">
+            </div>
+            <!-- Residental Photo Container 1 -->
+            <div class="residental-photo-container-1">
+                <img id="residental-photo-1" src="./images/residental-photo-1.png" alt="residental-photo-1 image" width="727px" height="762px">
+            </div>
+            <!-- Residental Photo Container 2 -->
+            <div class="residental-photo-container-2">
+                <img id="residental-photo-2" src="./images/residental-photo-2.png" alt="residental-photo-1 image" width="727px" height="762px">
+            </div>
+            <div class="residental-counter">
+                <div id="next-residental" onclick="nextResidental()">
+                    <img id="next-residental-arrow" src="./images/button-arrow-2.svg" alt="arrow-button" width="45px" height="21px">
+                </div>
+                <div class="counter-residental" id="counter-residental">1 / 5</div>
+            </div>
+        </div>
+    </div>
+    <!-- Start of the Third Block with d Full Width Photos and Action Button -->
+    <div class="third-block">
+        <!-- Supervision Info -->
+        <div class="supervision-info">
+            <h2>autor&rsquo;s <br> supervision <br> and equipment  <br> management</h2>
+            <div class="info">
+                <p>It&nbsp;is&nbsp;recommended that author&rsquo;s supervision be&nbsp;carried out from the first drawings are issued to&nbsp;builders.</p>
+                <p>Suprevision and management can be&nbsp;ordered mounhly as&nbsp;a&nbsp;subscription servise or&nbsp;as&nbsp;a&nbsp;one-off service.</p>
+                <p>first supervision, then payment. payment for escort is&nbsp;made at&nbsp;the end of&nbsp;earch month according to&nbsp;the scope of&nbsp;work performed.</p>
+            </div>
+        </div>
+        <!-- Full Width Photo -->
+        <div class="full-width-photo">
+            <img class="full-1" src="./images/full-width-1.png" alt="photo-1" width="384px" height="408px">
+            <img class="full-2" src="./images/full-width-2.png" alt="photo-2" width="384px" height="408px">
+            <img class="full-3" src="./images/full-width-3.png" alt="photo-3" width="384px" height="408px">
+            <img class="full-4" src="./images/full-width-4.png" alt="photo-4" width="384px" height="408px">
+            <img class="full-5" src="./images/full-width-5.png" alt="photo-5" width="384px" height="408px">
+            <div class="read-more">
+                <img src="./images/little-line.svg" alt="little-line-img" width="44px" height="1px">
+                <h3>Read More</h3>
+            </div>
+        </div>
+        <!-- Action Button -->
+        <div class="work-together-container">
+            <h2>Ready to work <br> together?</h2>
+            <div class="start-project">
+                <h2>Start a project</h2>
+                <img src="./images/button-arrow.svg" alt="arrow-button" width="45px" height="21px">
+            </div>
+        </div>
+    </div>
+    <!-- Start of the Footer Block -->
+    <div class="footer-block">
+        <div id="line-horizontal-1"></div>
+        <div id="line-horizontal-2"></div>
+        <div class="social-media-container">
+            <h3>Social Media</h3>
+            <div class="socials-links">
+                <a href="#">Behance</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="addresses-container">
+            <h3>Address</h3>
+            <div class="addresses">
+                <address>Vilnius. Katedros G.2</address>
+                <address>Minsk. Lobanka 85/A</address>
+                <address>Kiyev. Marska 38</address>
+            </div>
+        </div>
+        <div class="e-mail">
+            <h3>E-mail</h3>
+            <a href="#">hello.1618Room@gmail</a>
+        </div>
+        <div class="second-logo">
+            <img class="logo2" src="./images/logo-2-1618.svg" alt="logo-2-1618" width="535px" height="212px">
+            <img class="logo2-line" src="./images/logo-2-line.svg" alt="logo-2-line" width="166px" height="10px">
+            <img class="logo2-room" src="./images/logo-2-room.svg" alt="logo-2-room" width="245px" height="62px">
+        </div>
+        <div class="copyright">
+            <h3>©1618Room 2023 <br> Liza Maleeva <br> Nick Column</h3>
+        </div>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>
