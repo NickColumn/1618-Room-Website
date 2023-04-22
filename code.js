@@ -1,16 +1,16 @@
 // Getting Top Off-canvas menu to work?
-var dropBlock = document.getElementById("dropdown-block");
-var dropLogo = document.getElementById("drop-logo");
-var dropX = document.getElementById("drop-x");
-let dropHead = [dropLogo, dropX];
-var dropProjects = document.getElementById("projects-link");
-var dropAbout = document.getElementById("about-link");
-var dropContacts = document.getElementById("contacts-link");
-var dropBehance = document.getElementById("behance");
-var dropFacebook = document.getElementById("facebook");
-var dropInstagram = document.getElementById("instagram");
-let dropSocials = [dropBehance, dropFacebook, dropInstagram];
-var socialsClass = document.getElementsByClassName("drop-link");
+const dropBlock = document.getElementById("dropdown-block");
+const dropLogo = document.getElementById("drop-logo");
+const dropX = document.getElementById("drop-x");
+const dropHead = [dropLogo, dropX];
+const dropProjects = document.getElementById("projects-link");
+const dropAbout = document.getElementById("about-link");
+const dropContacts = document.getElementById("contacts-link");
+const dropBehance = document.getElementById("behance");
+const dropFacebook = document.getElementById("facebook");
+const dropInstagram = document.getElementById("instagram");
+const dropSocials = [dropBehance, dropFacebook, dropInstagram];
+const socialsClass = document.getElementsByClassName("drop-link");
 
 function dropOpen(){
     dropBlock.style.transitionDelay = "";
@@ -44,8 +44,8 @@ function dropClose(){
 
 // Arrow buttons behaviour
 // Button 1 Commercial
-var commercialButton = document.getElementById("commercial-button");
-var commercialArrow = document.getElementById("arrow-button-1");
+const commercialButton = document.getElementById("commercial-button");
+const commercialArrow = document.getElementById("arrow-button-1");
 commercialButton.onmouseover = function() {
     commercialArrow.style.transitionDuration = "0.5s";
     commercialArrow.style.marginRight = "-10px";
@@ -58,8 +58,8 @@ commercialButton.onmouseout = function() {
 }
 
 // Button 2 Residental
-var residentalButton = document.getElementById("residental-button");
-var residentalArrow = document.getElementById("arrow-button-2");
+const residentalButton = document.getElementById("residental-button");
+const residentalArrow = document.getElementById("arrow-button-2");
 residentalButton.onmouseover = function() {
     residentalArrow.style.transitionDuration = "0.5s";
     residentalArrow.style.marginRight = "-10px";
@@ -72,8 +72,8 @@ residentalButton.onmouseout = function() {
 }
 
 // Commercial next img
-var commercialNextButton = document.getElementById("next-commercial");
-var commercialNextArrow = document.getElementById("next-commercial-arrow");
+const commercialNextButton = document.getElementById("next-commercial");
+const commercialNextArrow = document.getElementById("next-commercial-arrow");
 commercialNextButton.onmouseover = function() {
     commercialNextArrow.style.transitionDuration = "0.5s";
     commercialNextArrow.style.marginLeft = "10px";
@@ -84,53 +84,54 @@ commercialNextButton.onmouseout = function() {
         commercialNextArrow.style.transitionDuration = "";
       }, 4000);
 }
-var image1Commercial = "./images/commersial-photo-1.png";
-var image2Commercial = "./images/commersial-photo-2.png";
-var image3Commercial = "./images/commersial-photo-3.png";
-var image4Commercial = "./images/commersial-photo-4.png";
-var image5Commercial = "./images/commersial-photo-5.png";
+let image1Commercial = "./images/commersial-photo-1.png";
+let image2Commercial = "./images/commersial-photo-2.png";
+let image3Commercial = "./images/commersial-photo-3.png";
+let image4Commercial = "./images/commersial-photo-4.png";
+let image5Commercial = "./images/commersial-photo-5.png";
 let imagesCommercial = [image1Commercial, image2Commercial, image3Commercial, image4Commercial, image5Commercial];
-var currentImg = 1;
-var counterNumberCommercial = 1;
-var counterCommercial = document.getElementById("counter-commercial");
+let currentImg = 1;
+let counterNumberCommercial = 1;
+let counterCommercial = document.getElementById("counter-commercial");
 function nextCommercial() {
-    var imageContainer1 = document.getElementById("commercial-photo-1");
-    var imageContainer2 = document.getElementById("commercial-photo-2");
-    imageContainer1.style.transition = "opacity 0.6s";
-    imageContainer2.style.transition = "opacity 0.6s";
-    imageContainer1.style.opacity = 0;
-    imageContainer2.style.opacity = 0;
-    setTimeout(function() {
-        imageContainer1.src = imagesCommercial[currentImg];
-        if (currentImg === 4) {
-            imageContainer2.src = image1Commercial;
-        }
-        else {
-            imageContainer2.src = imagesCommercial[currentImg + 1];
-        }
-        if (currentImg < 4) {
-            currentImg += 1;
-        }
-        else {
-            currentImg = 0;
-        }
-        if (counterNumberCommercial < 5) {
-            counterNumberCommercial += 1;
-        }
-        else {
-            counterNumberCommercial = 1;
-        }
-        counterCommercial.innerHTML = `${counterNumberCommercial} / 5`;
-        setTimeout(function() {
-            imageContainer1.style.opacity = 1;
-            imageContainer2.style.opacity = 1;
-        }, 300);
-    }, 500);
+    
+    // let imageContainer1 = document.getElementById("commercial-photo-1");
+    // let imageContainer2 = document.getElementById("commercial-photo-2");
+    // imageContainer1.style.transition = "opacity 0.6s";
+    // imageContainer2.style.transition = "opacity 0.6s";
+    // imageContainer1.style.opacity = 0;
+    // imageContainer2.style.opacity = 0;
+    // setTimeout(function() {
+    //     imageContainer1.src = imagesCommercial[currentImg];
+    //     if (currentImg === 4) {
+    //         imageContainer2.src = image1Commercial;
+    //     }
+    //     else {
+    //         imageContainer2.src = imagesCommercial[currentImg + 1];
+    //     }
+    //     if (currentImg < 4) {
+    //         currentImg += 1;
+    //     }
+    //     else {
+    //         currentImg = 0;
+    //     }
+    //     if (counterNumberCommercial < 5) {
+    //         counterNumberCommercial += 1;
+    //     }
+    //     else {
+    //         counterNumberCommercial = 1;
+    //     }
+    //     counterCommercial.innerHTML = `${counterNumberCommercial} / 5`;
+    //     setTimeout(function() {
+    //         imageContainer1.style.opacity = 1;
+    //         imageContainer2.style.opacity = 1;
+    //     }, 300);
+    // }, 500);
 }
 
 // Residental next img
-var residentalNextButton = document.getElementById("next-residental");
-var residentalNextArrow = document.getElementById("next-residental-arrow");
+const residentalNextButton = document.getElementById("next-residental");
+const residentalNextArrow = document.getElementById("next-residental-arrow");
 residentalNextButton.onmouseover = function() {
     residentalNextArrow.style.transitionDuration = "0.5s";
     residentalNextArrow.style.marginLeft = "10px";
@@ -141,18 +142,18 @@ residentalNextButton.onmouseout = function() {
         residentalNextArrow.style.transitionDuration = "";
       }, 4000);
 }
-var image1Residental = "./images/residental-photo-1.png";
-var image2Residental = "./images/residental-photo-2.png";
-var image3Residental = "./images/residental-photo-3.png";
-var image4Residental = "./images/residental-photo-4.png";
-var image5Residental = "./images/residental-photo-5.png";
+let image1Residental = "./images/residental-photo-1.png";
+let image2Residental = "./images/residental-photo-2.png";
+let image3Residental = "./images/residental-photo-3.png";
+let image4Residental = "./images/residental-photo-4.png";
+let image5Residental = "./images/residental-photo-5.png";
 let imagesResidental = [image1Residental, image2Residental, image3Residental, image4Residental, image5Residental];
-var currentImgR = 1;
-var counterNumberResidental = 1;
-var counterResidental = document.getElementById("counter-residental");
+let currentImgR = 1;
+let counterNumberResidental = 1;
+let counterResidental = document.getElementById("counter-residental");
 function nextResidental() {
-    var imageContainer3 = document.getElementById("residental-photo-1");
-    var imageContainer4 = document.getElementById("residental-photo-2");
+    let imageContainer3 = document.getElementById("residental-photo-1");
+    let imageContainer4 = document.getElementById("residental-photo-2");
     imageContainer3.style.transition = "opacity 0.6s";
     imageContainer4.style.transition = "opacity 0.6s";
     imageContainer3.style.opacity = 0;
