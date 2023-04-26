@@ -380,13 +380,32 @@ div.vertical-line {
 .commercial-photo-container-1 {
     grid-area: img1;
 }
+#commercial-photo-1 {
+    opacity: 100%;
+    transition: 1.5s;
+}
+#commercial-animation-box-1 {
+    grid-area: img1;
+    opacity: 0;
+    transition: 1.5s;
+}
+
 .commercial-photo-container-2 {
     grid-area: img2;
 }
-.commercial-photo-container-2 img {
+#commercial-photo-2 {
     height: 99%;
     object-fit: cover;
     object-position: 0;
+    transition: 1.5s;
+}
+#commercial-animation-box-2 {
+    height: 99%;
+    object-fit: cover;
+    object-position: 0;
+    grid-area: img2;
+    opacity: 0;
+    transition: 1.5s;
 }
 
 /* Commecrial Button with Photo Counter */

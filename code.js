@@ -43,7 +43,7 @@ function dropClose(){
 }
 
 // Arrow buttons behaviour
-// Button 1 Commercial
+// BIG Button that leads to Commercial Page
 const commercialButton = document.getElementById("commercial-button");
 const commercialArrow = document.getElementById("arrow-button-1");
 commercialButton.onmouseover = function() {
@@ -57,7 +57,7 @@ commercialButton.onmouseout = function() {
       }, 4000);
 }
 
-// Button 2 Residental
+// BIG Button that leads to Residental Page
 const residentalButton = document.getElementById("residental-button");
 const residentalArrow = document.getElementById("arrow-button-2");
 residentalButton.onmouseover = function() {
@@ -71,7 +71,7 @@ residentalButton.onmouseout = function() {
       }, 4000);
 }
 
-// Commercial next img
+// Little Arrow that Changes to next Photo on Commercial
 const commercialNextButton = document.getElementById("next-commercial");
 const commercialNextArrow = document.getElementById("next-commercial-arrow");
 commercialNextButton.onmouseover = function() {
@@ -84,104 +84,53 @@ commercialNextButton.onmouseout = function() {
         commercialNextArrow.style.transitionDuration = "";
       }, 4000);
 }
-let image1Commercial = "./images/commersial-photo-1.png";
-let image2Commercial = "./images/commersial-photo-2.png";
-let image3Commercial = "./images/commersial-photo-3.png";
-let image4Commercial = "./images/commersial-photo-4.png";
-let image5Commercial = "./images/commersial-photo-5.png";
-let imagesCommercial = [image1Commercial, image2Commercial, image3Commercial, image4Commercial, image5Commercial];
-let currentImg = 1;
-let counterNumberCommercial = 1;
-let counterCommercial = document.getElementById("counter-commercial");
-function nextCommercial() {
-    
-    // let imageContainer1 = document.getElementById("commercial-photo-1");
-    // let imageContainer2 = document.getElementById("commercial-photo-2");
-    // imageContainer1.style.transition = "opacity 0.6s";
-    // imageContainer2.style.transition = "opacity 0.6s";
-    // imageContainer1.style.opacity = 0;
-    // imageContainer2.style.opacity = 0;
-    // setTimeout(function() {
-    //     imageContainer1.src = imagesCommercial[currentImg];
-    //     if (currentImg === 4) {
-    //         imageContainer2.src = image1Commercial;
-    //     }
-    //     else {
-    //         imageContainer2.src = imagesCommercial[currentImg + 1];
-    //     }
-    //     if (currentImg < 4) {
-    //         currentImg += 1;
-    //     }
-    //     else {
-    //         currentImg = 0;
-    //     }
-    //     if (counterNumberCommercial < 5) {
-    //         counterNumberCommercial += 1;
-    //     }
-    //     else {
-    //         counterNumberCommercial = 1;
-    //     }
-    //     counterCommercial.innerHTML = `${counterNumberCommercial} / 5`;
-    //     setTimeout(function() {
-    //         imageContainer1.style.opacity = 1;
-    //         imageContainer2.style.opacity = 1;
-    //     }, 300);
-    // }, 500);
-}
 
-// Residental next img
-const residentalNextButton = document.getElementById("next-residental");
-const residentalNextArrow = document.getElementById("next-residental-arrow");
-residentalNextButton.onmouseover = function() {
-    residentalNextArrow.style.transitionDuration = "0.5s";
-    residentalNextArrow.style.marginLeft = "10px";
-}
-residentalNextButton.onmouseout = function() {
-    residentalNextArrow.style.marginLeft = "0px";
-    setTimeout(() => {
-        residentalNextArrow.style.transitionDuration = "";
-      }, 4000);
-}
-let image1Residental = "./images/residental-photo-1.png";
-let image2Residental = "./images/residental-photo-2.png";
-let image3Residental = "./images/residental-photo-3.png";
-let image4Residental = "./images/residental-photo-4.png";
-let image5Residental = "./images/residental-photo-5.png";
-let imagesResidental = [image1Residental, image2Residental, image3Residental, image4Residental, image5Residental];
-let currentImgR = 1;
-let counterNumberResidental = 1;
-let counterResidental = document.getElementById("counter-residental");
-function nextResidental() {
-    let imageContainer3 = document.getElementById("residental-photo-1");
-    let imageContainer4 = document.getElementById("residental-photo-2");
-    imageContainer3.style.transition = "opacity 0.6s";
-    imageContainer4.style.transition = "opacity 0.6s";
-    imageContainer3.style.opacity = 0;
-    imageContainer4.style.opacity = 0;
-    setTimeout(function() {
-        imageContainer3.src = imagesResidental[currentImgR];
-        if (currentImgR === 4) {
-            imageContainer4.src = image1Residental;
-        }
-        else {
-            imageContainer4.src = imagesResidental[currentImgR + 1];
-        }
-        if (currentImgR < 4) {
-            currentImgR += 1;
-        }
-        else {
-            currentImgR = 0;
-        }
-        if (counterNumberResidental < 5) {
-            counterNumberResidental += 1;
-        }
-        else {
-            counterNumberResidental = 1;
-        }
-        counterResidental.innerHTML = `${counterNumberResidental} / 5`;
-        setTimeout(function() {
-            imageContainer3.style.opacity = 1;
-            imageContainer4.style.opacity = 1;
-        }, 300);
-    }, 500);
+
+
+
+// Commercial Gallery Behaviour
+let imagesCommercial = ["./images/commersial-photo-1.png", "./images/commersial-photo-2.png", "./images/commersial-photo-3.png", "./images/commersial-photo-4.png", "./images/commersial-photo-5.png"];
+let imgIndex = 0;
+// let counterNumberCommercial = 1;
+// let counterCommercial = document.getElementById("counter-commercial");
+
+function nextCommercial() {
+    let foregroundPhoto1 = document.getElementById("commercial-photo-1");
+    let backgroundPhoto1 = document.getElementById("commercial-animation-box-1");
+    let foregroundPhoto2 = document.getElementById("commercial-photo-2");
+    let backgroundPhoto2 = document.getElementById("commercial-animation-box-2");
+
+    if (imgIndex == 0) {
+        foregroundPhoto1.style.opacity = foregroundPhoto2.style.opacity = "0%";
+        backgroundPhoto1.style.opacity = backgroundPhoto2.style.opacity = "100%";
+        setTimeout(() => {
+            foregroundPhoto1.src = imagesCommercial[2];
+            foregroundPhoto2.src = imagesCommercial[3];
+            }, 1500);
+        imgIndex += 1;
+    } else if (imgIndex == 1) {
+        foregroundPhoto1.style.opacity = foregroundPhoto2.style.opacity = "100%";
+        backgroundPhoto1.style.opacity = backgroundPhoto2.style.opacity = "0%";
+        setTimeout(() => {
+            backgroundPhoto1.src = imagesCommercial[3];
+            backgroundPhoto2.src = imagesCommercial[4];
+            }, 1500);
+        imgIndex += 1;
+    } else if (imgIndex == 2) {
+        foregroundPhoto1.style.opacity = foregroundPhoto2.style.opacity = "0%";
+        backgroundPhoto1.style.opacity = backgroundPhoto2.style.opacity = "100%";
+        setTimeout(() => {
+            foregroundPhoto1.src = imagesCommercial[5];
+            foregroundPhoto1.src = imagesCommercial[0];
+            }, 1500);
+        imgIndex += 1;
+    } else if (imgIndex == 3) {
+        foregroundPhoto1.style.opacity = foregroundPhoto2.style.opacity = "100%";
+        backgroundPhoto1.style.opacity = backgroundPhoto2.style.opacity = "0%";
+        setTimeout(() => {
+            backgroundPhoto1.src = imagesCommercial[0];
+            backgroundPhoto2.src = imagesCommercial[1];
+            }, 1500);
+        imgIndex = 0;
+    }
 }
