@@ -91,18 +91,22 @@
             <div class="commercial-photo-container-1">
                 <img id="commercial-photo-1" src="./images/commersial-photo-1.png" alt="commercial-photo-1 image" width="727px" height="762px">
             </div>
-            <img id="commercial-animation-box-1" src="./images/commersial-photo-2.png" alt="" width="727px" height="762px">
+            <div class="commercial-animation-container-1">
+                <img id="commercial-animation-box-1" src="./images/commersial-photo-2.png" alt="" width="727px" height="762px">
+            </div>
             <!-- Commercial Photo Container 2 -->
             <div class="commercial-photo-container-2">
                 <img id="commercial-photo-2" src="./images/commersial-photo-2.png" alt="commercial-photo-2 image" width="727px" height="762px">
             </div>
-            <img id="commercial-animation-box-2" src="./images/commersial-photo-3.png" alt="" width="727px" height="762px">
+            <div class="commercial-animation-container-2">
+                <img id="commercial-animation-box-2" src="./images/commersial-photo-4.png" alt="" width="727px" height="762px">
+            </div>
             <!-- Commercial Counter -->
             <div class="commercial-counter">
-                <div id="next-commercial" onclick="nextCommercial()">
+                <button id="next-commercial" onclick="nextPhotoGallery('commercial', imgIndexCommercial)">
                     <img id="next-commercial-arrow" src="./images/button-arrow-2.svg" alt="arrow-button" width="45px" height="21px">
-                </div>
-                <div class="counter-commercial" id="counter-commercial">1 / 5</div>
+                </button>
+                <div class="counter-commercial" id="counter-commercial">1 / 4</div>
             </div>
         </div>
         <!-- Residental Gallery -->
@@ -117,15 +121,21 @@
             <div class="residental-photo-container-1">
                 <img id="residental-photo-1" src="./images/residental-photo-1.png" alt="residental-photo-1 image" width="727px" height="762px">
             </div>
+            <div class="residental-animation-container-1">
+                <img id="residental-animation-box-1" src="./images/residental-photo-3.png" alt="" width="727px" height="762px">
+            </div>
             <!-- Residental Photo Container 2 -->
             <div class="residental-photo-container-2">
                 <img id="residental-photo-2" src="./images/residental-photo-2.png" alt="residental-photo-1 image" width="727px" height="762px">
             </div>
+            <div class="residental-animation-container-2">
+                <img id="residental-animation-box-2" src="./images/residental-photo-1.png" alt="" width="727px" height="762px">
+            </div>
             <div class="residental-counter">
-                <div id="next-residental" onclick="nextResidental()">
+                <button id="next-residental" onclick="nextPhotoGallery('residental', imgIndexResidental)">
                     <img id="next-residental-arrow" src="./images/button-arrow-2.svg" alt="arrow-button" width="45px" height="21px">
-                </div>
-                <div class="counter-residental" id="counter-residental">1 / 5</div>
+                </button>
+                <div class="counter-residental" id="counter-residental">1 / 4</div>
             </div>
         </div>
     </div>

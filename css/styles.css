@@ -380,32 +380,41 @@ div.vertical-line {
 .commercial-photo-container-1 {
     grid-area: img1;
 }
+.commercial-animation-container-1 {
+    grid-area: img1;
+}
 #commercial-photo-1 {
     opacity: 100%;
-    transition: 1.5s;
+    transition: 1.2s;
+    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 #commercial-animation-box-1 {
-    grid-area: img1;
     opacity: 0;
-    transition: 1.5s;
+    transition: 1.2s;
+    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 
 .commercial-photo-container-2 {
     grid-area: img2;
 }
+.commercial-animation-container-2 {
+    grid-area: img2;
+}
+
 #commercial-photo-2 {
     height: 99%;
     object-fit: cover;
     object-position: 0;
-    transition: 1.5s;
+    transition: 1.2s;
+    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 #commercial-animation-box-2 {
     height: 99%;
     object-fit: cover;
     object-position: 0;
-    grid-area: img2;
     opacity: 0;
-    transition: 1.5s;
+    transition: 1.2s;
+    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 
 /* Commecrial Button with Photo Counter */
@@ -418,6 +427,10 @@ div.vertical-line {
     "arrow counter";
 }
 #next-commercial {
+    width: fit-content;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
     grid-area: arrow;
     cursor: pointer;
 }
@@ -479,17 +492,48 @@ div.vertical-line {
     width: 100%;
     height: auto;
 }
+
 .residental-photo-container-1 {
     grid-area: img1;
 }
-.residental-photo-container-2 {
-    grid-area: img2;
+.residental-animation-container-1 {
+    grid-area: img1;
 }
-.residental-photo-container-1 img {
+#residental-photo-1 {
+    opacity: 100%;
+    transition: 1.2s;
     height: 99%;
     object-fit: cover;
     object-position: 0;
+    box-shadow: -2px 2px 2px rgb(63, 78, 66);
 }
+#residental-animation-box-1 {
+   opacity: 0;
+   transition: 1.2s;
+   height: 99%;
+   object-fit: cover;
+   object-position: 0;
+   box-shadow: -2px 2px 2px rgb(63, 78, 66);
+}
+
+.residental-photo-container-2 {
+    grid-area: img2;
+}
+.residental-animation-container-2 {
+    grid-area: img2;
+}
+
+#residental-photo-2 {
+    opacity: 100%;
+    transition: 1.2s;
+    box-shadow: -2px 2px 2px rgb(63, 78, 66);
+}
+#residental-animation-box-2 {
+    opacity: 0%;
+    transition: 1.2s;
+    box-shadow: -2px 2px 2px rgb(63, 78, 66);
+}
+
 
 /* Residental Button with Photo Counter */
 .residental-counter {
@@ -501,6 +545,11 @@ div.vertical-line {
     "arrow counter";
 }
 #next-residental {
+    width: fit-content;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    grid-area: arrow;
     cursor: pointer;
 }
 #next-residental-arrow {
