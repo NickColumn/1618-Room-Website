@@ -129,36 +129,25 @@ body {
     justify-self: end;
     cursor: pointer;
 }
-#projects-link, #about-link, #contacts-link {
+#projects-link, #about-link, #contacts-link, #behance, #facebook, #instagram {
     align-self: center;
     justify-self: center;
+    transition-duration: 1.5s;
+    opacity: 0;
+    margin-top: -20px;
 }
 #projects-link {
     grid-area: first;
-    transition-duration: 1.5s;
-    opacity: 0;
-    margin-top: -20px;
 }
 #about-link {
     grid-area: second;
-    transition-duration: 1.5s;
-    opacity: 0;
-    margin-top: -20px;
 }
 #contacts-link {
     grid-area: third;
-    transition-duration: 1.5s;
-    opacity: 0;
-    margin-top: -20px;
 }
 #behance, #facebook, #instagram {
     color: var(--gray);
     font-size: 1rem;
-    align-self: center;
-    justify-self: center;
-    opacity: 0;
-    transition-duration: 1.5s;
-    margin-top: -20px;
 }
 #behance {
     grid-area: behance;
@@ -247,6 +236,7 @@ div.vertical-line {
     justify-self: end;
     width: 40%;
     height: 1px;
+    box-shadow: none;
 }
 .first-block-images-button p {
     align-self: center;
@@ -355,22 +345,21 @@ div.vertical-line {
     ". . . .";
     column-gap: 1rem;
 }
-.commercial-page h2 {
-    grid-area: h2;
-    font-size: 2.6rem;
+
+.commercial-page h2, .commercial-page h4, .commercial-page img {
     justify-self: end;
     cursor: pointer;
 }
+.commercial-page h2 {
+    grid-area: h2;
+    font-size: 2.6rem;
+}
 .commercial-page h4 {
     grid-area: h4;
-    justify-self: end;
-    cursor: pointer;
 }
 .commercial-page img {
     grid-area: arrow;
     align-self: end;
-    justify-self: end;
-    cursor: pointer;
 }
 /* Layout of Commersial Gallery */
 .commercial-gallery img {
@@ -386,12 +375,10 @@ div.vertical-line {
 #commercial-photo-1 {
     opacity: 100%;
     transition: 1.2s;
-    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 #commercial-animation-box-1 {
     opacity: 0;
     transition: 1.2s;
-    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 
 .commercial-photo-container-2 {
@@ -401,20 +388,18 @@ div.vertical-line {
     grid-area: img2;
 }
 
-#commercial-photo-2 {
-    height: 99%;
+#commercial-photo-2, .commercial-animation-box-2 {
+    height: 98.9%;
     object-fit: cover;
     object-position: 0;
     transition: 1.2s;
-    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 #commercial-animation-box-2 {
-    height: 99%;
+    opacity: 0;
+    height: 98.9%;
     object-fit: cover;
     object-position: 0;
-    opacity: 0;
     transition: 1.2s;
-    box-shadow: 2px 2px 2px rgb(63, 78, 66);
 }
 
 /* Commecrial Button with Photo Counter */
@@ -435,7 +420,7 @@ div.vertical-line {
     cursor: pointer;
 }
 #next-commercial-arrow {
-    width: 45px;
+    width: 48px;
     height: 21px;
 }
 .counter-commercial {
@@ -469,22 +454,20 @@ div.vertical-line {
     ". . . .";
     column-gap: 1rem;
 }
-.residental-page h2 {
-    grid-area: h2;
-    font-size: 2.6rem;
+.residental-page h2, .residental-page h4, .residental-page img {
     justify-self: end;
     cursor: pointer;
 }
+.residental-page h2 {
+    grid-area: h2;
+    font-size: 2.6rem;
+}
 .residental-page h4 {
     grid-area: h4;
-    justify-self: end;
-    cursor: pointer;
 }
 .residental-page img {
     grid-area: arrow;
     align-self: end;
-    justify-self: end;
-    cursor: pointer;
 }
 
 /* Layout of Residental Gallery */
@@ -502,18 +485,16 @@ div.vertical-line {
 #residental-photo-1 {
     opacity: 100%;
     transition: 1.2s;
-    height: 99%;
+    height: 98.9%;
     object-fit: cover;
     object-position: 0;
-    box-shadow: -2px 2px 2px rgb(63, 78, 66);
 }
 #residental-animation-box-1 {
    opacity: 0;
    transition: 1.2s;
-   height: 99%;
+   height: 98.9%;
    object-fit: cover;
    object-position: 0;
-   box-shadow: -2px 2px 2px rgb(63, 78, 66);
 }
 
 .residental-photo-container-2 {
@@ -526,12 +507,10 @@ div.vertical-line {
 #residental-photo-2 {
     opacity: 100%;
     transition: 1.2s;
-    box-shadow: -2px 2px 2px rgb(63, 78, 66);
 }
 #residental-animation-box-2 {
     opacity: 0%;
     transition: 1.2s;
-    box-shadow: -2px 2px 2px rgb(63, 78, 66);
 }
 
 
@@ -647,6 +626,12 @@ div.vertical-line {
 }
 .read-more h3 {
     grid-area: h3;
+    transition: 0.4s;
+}
+.read-more h3:hover {
+    color: var(--active);
+    transition: 0.4s;
+    cursor: pointer;
 }
 /* Container that leads to Start project Page */
 .work-together-container {
@@ -671,6 +656,12 @@ div.vertical-line {
 .start-project h2 {
     grid-column: 1;
     color: var(--light);
+    transition: 0.4s;
+}
+.start-project h2:hover {
+    color: var(--active);
+    transition: 0.4s;
+    cursor: pointer;
 }
 .start-project img {
     grid-column: 2;
@@ -718,6 +709,11 @@ div.vertical-line {
     color: var(--light);
     font-size: 1rem;
     text-decoration: none;
+}
+.socials-links:hover {
+    color: var(--active);
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 /* Addresses Container Styling */
