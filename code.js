@@ -1,118 +1,3 @@
-// Getting Top Off-canvas menu to work?
-const dropBlock = document.getElementById("dropdown-block");
-const dropLogo = document.getElementById("drop-logo");
-const dropX = document.getElementById("drop-x");
-const dropHead = [dropLogo, dropX];
-const dropProjects = document.getElementById("projects-link");
-const dropAbout = document.getElementById("about-link");
-const dropContacts = document.getElementById("contacts-link");
-const dropBehance = document.getElementById("behance");
-const dropFacebook = document.getElementById("facebook");
-const dropInstagram = document.getElementById("instagram");
-const dropSocials = [dropBehance, dropFacebook, dropInstagram];
-const socialsClass = document.getElementsByClassName("drop-link");
-
-function preventDefaultScroll(e) {
-    e.preventDefault();
-    window.scrollTo(0, 0);
-}
-function enableScroll() {
-    window.removeEventListener('scroll', preventDefaultScroll);
-  }
-
-function dropOpen(){
-    window.addEventListener('scroll', preventDefaultScroll);
-    dropBlock.style.transitionDelay = "";
-    dropHead.forEach(element => element.style.transitionDelay = '0.2s');
-    dropContacts.style.transitionDelay = "0.8s";
-    dropAbout.style.transitionDelay = "0.6s";
-    dropProjects.style.transitionDelay = "0.4s";
-    dropSocials.forEach(element => element.style.transitionDelay = '1s');
-    dropBlock.style.top = "0px";
-    for (link of socialsClass) {
-        link.style.transitionDuration = "0.4s";
-        link.style.opacity = "100%";
-        link.style.marginTop = "10px";
-    }
-}
-
-function dropClose(){
-    dropHead.forEach(element => element.style.transitionDelay = '0.8s');
-    dropContacts.style.transitionDelay = "0.4s";
-    dropAbout.style.transitionDelay = "0.2s";
-    dropProjects.style.transitionDelay = "0s";
-    dropSocials.forEach(element => element.style.transitionDelay = '0.6s');
-    for (link of socialsClass) {
-        link.style.transitionDuration = "0.5s";
-        link.style.opacity = "0";
-        link.style.marginTop = "-20px";
-    }
-    dropBlock.style.transitionDelay = "0.6s";
-    dropBlock.style.top = "-1100px";
-    enableScroll();
-}
-
-// Arrow buttons behaviour
-// BIG Button that leads to Commercial Page
-const commercialButton = document.getElementById("commercial-button");
-const commercialArrow = document.getElementById("arrow-button-1");
-commercialButton.onmouseover = function() {
-    commercialArrow.style.transitionDuration = "0.5s";
-    commercialArrow.style.marginRight = "-10px";
-}
-commercialButton.onmouseout = function() {
-    commercialArrow.style.marginRight = "0px";
-    setTimeout(() => {
-        commercialArrow.style.transitionDuration = "";
-      }, 4000);
-}
-
-// BIG Button that leads to Residental Page
-const residentalButton = document.getElementById("residental-button");
-const residentalArrow = document.getElementById("arrow-button-2");
-residentalButton.onmouseover = function() {
-    residentalArrow.style.transitionDuration = "0.5s";
-    residentalArrow.style.marginRight = "-10px";
-}
-residentalButton.onmouseout = function() {
-    residentalArrow.style.marginRight = "0px";
-    setTimeout(() => {
-        residentalArrow.style.transitionDuration = "";
-      }, 4000);
-}
-
-// Little Arrow that Changes to next Photo on Commercial
-const commercialNextButton = document.getElementById("next-commercial");
-const commercialNextArrow = document.getElementById("next-commercial-arrow");
-commercialNextButton.onmouseover = function() {
-    commercialNextArrow.style.transitionDuration = "0.5s";
-    commercialNextArrow.style.marginLeft = "10px";
-}
-commercialNextButton.onmouseout = function() {
-    commercialNextArrow.style.marginLeft = "0px";
-    setTimeout(() => {
-        commercialNextArrow.style.transitionDuration = "";
-      }, 4000);
-}
-
-// Little Arrow that Changes to next Photo on Residental
-const residentalNextButton = document.getElementById("next-residental");
-const residentalNextArrow = document.getElementById("next-residental-arrow");
-residentalNextButton.onmouseover = function() {
-    residentalNextArrow.style.transitionDuration = "0.5s";
-    residentalNextArrow.style.marginLeft = "-10px";
-}
-residentalNextButton.onmouseout = function() {
-    residentalNextArrow.style.marginLeft = "0px";
-    setTimeout(() => {
-        residentalNextArrow.style.transitionDuration = "";
-      }, 4000);
-}
-
-
-
-
-
 // Galleries Behaviour
 const imagesCommercial = ["./images/commersial-photo-1.png", "./images/commersial-photo-2.png", "./images/commersial-photo-4.png", "./images/commersial-photo-5.png"];
 const imagesResidental = ["./images/residental-photo-1.png", "./images/residental-photo-2.png", "./images/residental-photo-3.png", "./images/residental-photo-5.png"];
@@ -229,4 +114,116 @@ function nextPhotoGallery(whatGallery, imgIndex) {
             }, 1000);
         }
     }
+}
+
+
+// Getting Top Off-canvas menu to work..?
+const dropBlock = document.getElementById("dropdown-block");
+const dropLogo = document.getElementById("drop-logo");
+const dropX = document.getElementById("drop-x");
+const dropHead = [dropLogo, dropX];
+const dropProjects = document.getElementById("projects-link");
+const dropAbout = document.getElementById("about-link");
+const dropContacts = document.getElementById("contacts-link");
+const dropBehance = document.getElementById("behance");
+const dropFacebook = document.getElementById("facebook");
+const dropInstagram = document.getElementById("instagram");
+const dropSocials = [dropBehance, dropFacebook, dropInstagram];
+const socialsClass = document.getElementsByClassName("drop-link");
+
+function preventDefaultScroll(e) {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+}
+function enableScroll() {
+    window.removeEventListener('scroll', preventDefaultScroll);
+  }
+
+function dropOpen(){
+    window.addEventListener('scroll', preventDefaultScroll);
+    dropBlock.style.transitionDelay = "";
+    dropHead.forEach(element => element.style.transitionDelay = '0.2s');
+    dropContacts.style.transitionDelay = "0.8s";
+    dropAbout.style.transitionDelay = "0.6s";
+    dropProjects.style.transitionDelay = "0.4s";
+    dropSocials.forEach(element => element.style.transitionDelay = '1s');
+    dropBlock.style.top = "0px";
+    for (link of socialsClass) {
+        link.style.transitionDuration = "0.4s";
+        link.style.opacity = "100%";
+        link.style.marginTop = "10px";
+    }
+}
+
+function dropClose(){
+    dropHead.forEach(element => element.style.transitionDelay = '0.8s');
+    dropContacts.style.transitionDelay = "0.4s";
+    dropAbout.style.transitionDelay = "0.2s";
+    dropProjects.style.transitionDelay = "0s";
+    dropSocials.forEach(element => element.style.transitionDelay = '0.6s');
+    for (link of socialsClass) {
+        link.style.transitionDuration = "0.5s";
+        link.style.opacity = "0";
+        link.style.marginTop = "-20px";
+    }
+    dropBlock.style.transitionDelay = "0.6s";
+    dropBlock.style.top = "-1100px";
+    enableScroll();
+}
+
+// Arrow buttons behaviour
+// BIG Button that leads to Commercial Page
+const commercialButton = document.getElementById("commercial-button");
+const commercialArrow = document.getElementById("arrow-button-1");
+commercialButton.onmouseover = function() {
+    commercialArrow.style.transitionDuration = "0.5s";
+    commercialArrow.style.marginRight = "-10px";
+}
+commercialButton.onmouseout = function() {
+    commercialArrow.style.marginRight = "0px";
+    setTimeout(() => {
+        commercialArrow.style.transitionDuration = "";
+      }, 4000);
+}
+
+// BIG Button that leads to Residental Page
+const residentalButton = document.getElementById("residental-button");
+const residentalArrow = document.getElementById("arrow-button-2");
+residentalButton.onmouseover = function() {
+    residentalArrow.style.transitionDuration = "0.5s";
+    residentalArrow.style.marginRight = "-10px";
+}
+residentalButton.onmouseout = function() {
+    residentalArrow.style.marginRight = "0px";
+    setTimeout(() => {
+        residentalArrow.style.transitionDuration = "";
+      }, 4000);
+}
+
+// Little Arrow that Changes to next Photo on Commercial
+const commercialNextButton = document.getElementById("next-commercial");
+const commercialNextArrow = document.getElementById("next-commercial-arrow");
+commercialNextButton.onmouseover = function() {
+    commercialNextArrow.style.transitionDuration = "0.5s";
+    commercialNextArrow.style.marginLeft = "10px";
+}
+commercialNextButton.onmouseout = function() {
+    commercialNextArrow.style.marginLeft = "0px";
+    setTimeout(() => {
+        commercialNextArrow.style.transitionDuration = "";
+      }, 4000);
+}
+
+// Little Arrow that Changes to next Photo on Residental
+const residentalNextButton = document.getElementById("next-residental");
+const residentalNextArrow = document.getElementById("next-residental-arrow");
+residentalNextButton.onmouseover = function() {
+    residentalNextArrow.style.transitionDuration = "0.5s";
+    residentalNextArrow.style.marginLeft = "-10px";
+}
+residentalNextButton.onmouseout = function() {
+    residentalNextArrow.style.marginLeft = "0px";
+    setTimeout(() => {
+        residentalNextArrow.style.transitionDuration = "";
+      }, 4000);
 }
