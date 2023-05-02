@@ -50,6 +50,7 @@
 <img width="1498" alt="Screenshot 2023-05-02 at 04 45 22" src="https://user-images.githubusercontent.com/66261255/235562827-659bb230-14ab-401a-af5e-6cbb724f41fb.png">
 
 <hr>
+<p>The design was made by Liza Maleeva https://www.behance.net/lizamaleeva</p>
 <h2>Thanks for watching!</h2>
 
 
