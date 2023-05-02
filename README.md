@@ -1,4 +1,4 @@
-<h1>1618 Room. Full Website.</h1>
+<h1>1618 Room. Architecture Studio Website.</h1>
 
 <img width="1516" alt="Screenshot 2023-05-02 at 03 32 50" src="https://user-images.githubusercontent.com/66261255/235554935-a016c65d-a76e-4cf5-ac97-4e4ce6e4b23b.png">
 
