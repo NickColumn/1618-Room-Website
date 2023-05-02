@@ -2,10 +2,13 @@
 
 <img width="1516" alt="Screenshot 2023-05-02 at 03 32 50" src="https://user-images.githubusercontent.com/66261255/235554935-a016c65d-a76e-4cf5-ac97-4e4ce6e4b23b.png">
 
+<h2>Self-education. Part 2.</h2>
+
 <h2>Goal</h2>
 <p>I've started this project just to understand how CSS Grid works and how to create something Responsive, but ended up creating this whole page.</p>
 <p>As far as I have tested it - it's a fully responsive design that works and looks okay(ish) on every single device in my house.</p>
 <p>The <strong>main</strong> goal here was to use Grid Layout EVERYWHERE and to teach myself some basic JS in the way.</p>
+<p>This whole page was made only by using HTML, CSS and super basic JavaScript.</p>
 
 <hr>
 <h2>Responsive Design</h2>
