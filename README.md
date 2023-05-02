@@ -41,9 +41,13 @@
 
 <img width="1493" alt="Screenshot 2023-05-02 at 04 43 15" src="https://user-images.githubusercontent.com/66261255/235562067-893ac834-4d30-4c94-bdff-923cb8a6d74c.png">
 
+<p>Creating something like this with Grid turned out to be super convenient when I was making the site Responsive.</p>
+<img width="1495" alt="Screenshot 2023-05-02 at 04 44 54" src="https://user-images.githubusercontent.com/66261255/235562415-14d32c0e-a6d8-4d94-8b36-cdba6b56edba.png">
 
+<img width="1498" alt="Screenshot 2023-05-02 at 04 45 22" src="https://user-images.githubusercontent.com/66261255/235562827-659bb230-14ab-401a-af5e-6cbb724f41fb.png">
 
-
+<hr>
+<h2>Thanks for watching!</h2>
 
 
 
