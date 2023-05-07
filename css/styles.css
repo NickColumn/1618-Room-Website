@@ -218,6 +218,12 @@ div.vertical-line {
 .first-block-image-container img {
     width: 100%;
     height: auto;
+    transition: 0.4s;
+}
+.first-block-image-container img:hover {
+    filter: saturate(0);
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 
@@ -542,6 +548,11 @@ div.vertical-line {
     grid-area: counter;
     align-self: center;
     justify-self: end;
+}
+
+/* Hover for every arrow in Galleries Block */
+#arrow-button-1:hover, #arrow-button-2:hover, #next-commercial-arrow:hover, #next-residental-arrow:hover {
+    filter: brightness(40%);
 }
 
 /* Third Block Styling */
@@ -957,6 +968,9 @@ address {
 
     .full-5 {
         display: none;
+    }
+    .first-block-image-container img:hover {
+        filter: none;
     }
 }
 
