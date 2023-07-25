@@ -8,7 +8,7 @@
 <p>I've started this project just to understand how CSS Grid works and how to create something Responsive, but ended up creating this whole page.</p>
 <p>As far as I have tested it - it's a fully responsive design that works and looks okay(ish) on every single device in my house.</p>
 <p>The <strong>main</strong> goal here was to use Grid Layout EVERYWHERE and to teach myself some basic JS in the way.</p>
-<p>This whole page was made only by using HTML, CSS and super basic JavaScript.</p>
+<p>This whole page was made only by using HTML, CSS and super basic JavaScript. </p>
 
 <hr>
 <h2>Responsive Design</h2>
